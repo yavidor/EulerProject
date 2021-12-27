@@ -12,6 +12,6 @@ def isdivisiblebyall(n):
 
 
 i = 20
-while (isdivisiblebyall(i) != True):
+while not isdivisiblebyall(i):
     i += 20
 print(i)

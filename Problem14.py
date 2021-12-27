@@ -10,8 +10,8 @@ def getcollatz(n, count):
 maximum = 0
 maxnum = 0
 i: int
-for i in range(1, 10**6):
-    col = getcollatz(i,0)
+for i in range(1, 10 ** 6):
+    col = getcollatz(i, 0)
     if col > maximum:
         maximum = col
         maxnum = i
