@@ -1,8 +1,12 @@
+"""
+The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the number 600851475143 ?
+"""
 import numpy
 
 
 def primesfrom2to(n):
-    """ Input n>=6, Returns a array of primes, 2 <= p < n """
     sieve = numpy.ones(n // 3 + (n % 6 == 2), dtype=numpy.bool)
     for i in range(1, int(n ** 0.5) // 3 + 1):
         if sieve[i]:
