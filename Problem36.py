@@ -11,11 +11,15 @@ def bothpali(d):
     if ispali(d) and ispali(bin(d)[2:]):
         return 1
     return 0
+
+
 def ispali(k):
     k = str(k)
     return k == k[::-1]
+
+
 count = 0
-for i in range(10**6):
+for i in range(10 ** 6):
     if ispali(i) and ispali(bin(i)[2:]):
         count += i
         print(i)

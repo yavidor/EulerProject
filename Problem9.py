@@ -9,15 +9,17 @@ Find the product abc.
 """
 
 
-def istriple(m, n):
-    a = m * m - n * n
-    b = 2 * m * n
-    c = m * m + n * n
+def istriple(m, n, k):
+    a = k * (m * m - n * n)
+    b = k * 2 * m * n
+    c = (m * m + n * n) * k
     return a * a + b * b == c * c
 
 
 for i in range(500):
+
     for j in range(i):
-        if (i * (i + j) == 500) and istriple(i, j):
-            print(i, j)
-print((20*20-25)*(2*20*5)*(20*20+25))
+        for k in range(500):
+            if (i * (i + j) == 500) and istriple(i, j, k):
+                print(i, j)
+print((20 * 20 - 25) * (2 * 20 * 5) * (20 * 20 + 25))
